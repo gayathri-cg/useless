@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #fff7e6, #ffe6e6);
+  padding: 20px;
+}
+.container {
+  max-width: 600px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: auto;
+}
+h1 { text-align: center; }
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+select, input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #ffbf00;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.progress {
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.progress-bar {
+  height: 100%;
+  background: #ffbf00;
+  width: 0%;
+  transition: width 0.3s;
+}
+.logs {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.85em;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 10px;
+}

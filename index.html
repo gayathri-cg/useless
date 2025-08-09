@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IST to IST Converter</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>IST → IST Converter</h1>
+  <label>Stated Time (minutes)
+    <input type="number" id="stated" value="5">
+  </label>
+  <label>Who is it?
+    <select id="who">
+      <option>Friend</option>
+      <option>Cousin for a wedding</option>
+      <option>Plumber</option>
+      <option>Food Delivery</option>
+      <option>Sibling</option>
+      <option>Boss</option>
+    </select>
+  </label>
+  <label>Occasion
+    <select id="occasion">
+      <option>Casual Coffee</option>
+      <option>Formal Event</option>
+      <option>Emergency</option>
+      <option>Wedding</option>
+      <option>Gym</option>
+      <option>Just dropping by</option>
+    </select>
+  </label>
+  <label>Current Location
+    <select id="location">
+      <option>Just left home</option>
+      <option>Reached signal</option>
+      <option>Traffic on the way</option>
+      <option>Stuck at chai stall</option>
+      <option>At work</option>
+    </select>
+  </label>
+  <button id="convert">Convert</button>
+  <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+  <h3>Real ETA: <span id="eta">—</span></h3>
+  <div class="logs" id="logs"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
