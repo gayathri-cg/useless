@@ -1,62 +1,120 @@
+
+* {
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "Segoe UI Emoji", sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom right, #fff7e6, #ffe6e6);
+  background: radial-gradient(circle at top, #ffecd2, #fcb69f);
   padding: 20px;
 }
+
 .container {
-  max-width: 600px;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #fff7e6;
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 500px;
   margin: auto;
+  box-shadow: 0 5px 20px rgba(255, 136, 0, 0.3);
+  text-align: center;
+  border: 3px dashed #ff8800;
+  animation: bounceIn 0.8s ease;
 }
-h1 { text-align: center; }
+
+h1 {
+  font-size: 2rem;
+  color: #ff5500;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px #fff;
+}
+
 label {
   display: block;
-  margin-top: 15px;
+  margin-top: 12px;
+  text-align: left;
   font-weight: bold;
+  color: #333;
 }
-select, input {
+
+input,
+select {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-button {
-  margin-top: 15px;
-  padding: 10px 15px;
-  background: #ffbf00;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-.progress {
-  height: 20px;
-  background: #eee;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 10px;
-}
-.progress-bar {
-  height: 100%;
-  background: #ffbf00;
-  width: 0%;
-  transition: width 0.3s;
-}
-.logs {
-  background: #f9f9f9;
   padding: 10px;
-  border-radius: 6px;
-  font-family: monospace;
-  font-size: 0.85em;
+  border: 2px solid #ffbb77;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff8f0;
+  transition: transform 0.2s;
+}
+
+input:focus,
+select:focus {
+  transform: scale(1.05);
+  border-color: #ff8800;
+  outline: none;
+}
+
+button {
+  background: linear-gradient(90deg, #ff6600, #ffbb33);
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  margin-top: 18px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px #cc5500;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px #cc5500;
+}
+
+.progress {
+  background: #fff0e0;
+  border-radius: 30px;
+  height: 14px;
+  margin: 15px 0;
+  overflow: hidden;
+  border: 2px solid #ffbb77;
+}
+
+.progress-bar {
+  background: repeating-linear-gradient(45deg, #ff6600, #ff6600 10px, #ffbb33 10px, #ffbb33 20px);
+  height: 100%;
+  width: 0;
+  transition: width 0.4s ease;
+}
+
+h3 {
+  margin-top: 10px;
+  color: #ff3300;
+  font-size: 1.4rem;
+}
+
+#eta {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.logs {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 0.95rem;
+  background: #fff1e6;
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid #ff8800;
   max-height: 150px;
   overflow-y: auto;
-  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
 }
